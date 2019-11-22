@@ -28,7 +28,7 @@ class AuthenticationController extends Controller
   public function logout(Request $request){
       $value = $request->bearerToken();
       $id= (new Parser())->parse($value)->getHeader('jti');
-      $token= $request->user()->tokens->find($id);
+      $token= $request->user()->token()->find($id);
       $token->revoke();
 
       $response = 'You have been successfully logged out';
