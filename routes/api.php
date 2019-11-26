@@ -14,6 +14,9 @@ use Illuminate\Http\Request;
 |
 */
 
+//Register User
+Route::post('/register','Auth\RegisterController@create');
+
 //public login
 Route::post('/login','AuthenticationController@login')->name('login');
 
