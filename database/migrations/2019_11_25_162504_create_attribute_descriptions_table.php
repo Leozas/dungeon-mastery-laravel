@@ -15,8 +15,8 @@ class CreateAttributeDescriptionsTable extends Migration
     {
         Schema::create('attribute_descriptions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->text('attribute');
-            $table->text('description');
+            $table->text('attribute'); // attribute name (str, dex, etc)
+            $table->text('description'); // attribute description
             $table->timestamps();
         });
     }

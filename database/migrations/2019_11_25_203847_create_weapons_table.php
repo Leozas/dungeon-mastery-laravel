@@ -14,8 +14,13 @@ class CreateWeaponsTable extends Migration
     public function up()
     {
         Schema::create('weapons', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+            $table->bigIncrements('id'); // auto id
+            $table->string('weapon'); // weapon name
+            $table->string('weapontype'); // meele vs ranged
+            $table->string('description'); // weapon description
+            $table->string('damage'); // damage (3d6)
+            $table->string('damagetype'); // damage type - slashing, piercing, blugeoning.
+            $table->timestamps(); // auto creation timestamp
         });
     }
 
