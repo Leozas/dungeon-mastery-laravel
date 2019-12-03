@@ -46,7 +46,7 @@ class WeaponsController extends Controller
      */
     public function show(Weapons $weapons)
     {
-        //
+        return Weapons::all();
     }
 
     /**

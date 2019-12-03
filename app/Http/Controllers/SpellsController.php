@@ -46,7 +46,7 @@ class SpellsController extends Controller
      */
     public function show(Spells $spells)
     {
-        //
+        return Spells::all();
     }
 
     /**
