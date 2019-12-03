@@ -19,7 +19,7 @@ class CreateSpellsTable extends Migration
             $table->string('description'); // spell description
             $table->string('range'); // spells range
             $table->string('damage'); // damage (3d6)
-            $table->string('damagetype'); // damage type - slashing, piercing, blugeoning.
+            $table->string('damagetype'); // damage type - fire, necrotic, radiant, etc
             $table->timestamps(); // auto creation timestamp
         });
     }
