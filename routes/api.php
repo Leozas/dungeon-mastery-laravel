@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\ArmorsController;
+use App\Http\Controllers\AttributeDescriptionsController;
 use App\Http\Controllers\AuthenticationController;
+use App\Http\Controllers\SpellsController;
+use App\Http\Controllers\WeaponsController;
 use Illuminate\Http\Request;
 
 /*
@@ -25,10 +29,8 @@ Route::middleware('auth:api')->group(function(){
     Route::get('/logout','AuthenticationController@logout')->name('logout');
 });
 
-//populate all attributes
-
-//populate all weapons
-
-//populate all armors
-
-//populate all spells
+// show tables
+Route::get('/attributes', 'AttributeDescriptionsController@show')->name('attribute'); 
+Route::get('/weapons', 'WeaponsController@show')->name('weapon');
+Route::get('/armors', 'ArmorsController@show')->name('armor');
+Route::get('/spells', 'SpellsController@show')->name('spell');

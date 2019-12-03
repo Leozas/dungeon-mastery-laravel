@@ -46,7 +46,7 @@ class AttributeDescriptionsController extends Controller
      */
     public function show(AttributeDescriptions $attributeDescriptions)
     {
-        //
+        return AttributeDescriptions::all();
     }
 
     /**

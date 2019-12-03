@@ -46,7 +46,7 @@ class CharactersController extends Controller
      */
     public function show(Characters $characters)
     {
-        //
+        return Characters::all();
     }
 
     /**

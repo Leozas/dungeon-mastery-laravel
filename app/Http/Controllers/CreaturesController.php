@@ -46,7 +46,7 @@ class CreaturesController extends Controller
      */
     public function show(Creatures $creatures)
     {
-        //
+        return Creatures::all();
     }
 
     /**
