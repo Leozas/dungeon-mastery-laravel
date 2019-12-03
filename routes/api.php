@@ -34,7 +34,3 @@ Route::get('/attributes', 'AttributeDescriptionsController@show')->name('attribu
 Route::get('/weapons', 'WeaponsController@show')->name('weapon');
 Route::get('/armors', 'ArmorsController@show')->name('armor');
 Route::get('/spells', 'SpellsController@show')->name('spell');
-
-
-
-

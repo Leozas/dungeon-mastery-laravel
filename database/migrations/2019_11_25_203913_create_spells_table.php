@@ -14,8 +14,13 @@ class CreateSpellsTable extends Migration
     public function up()
     {
         Schema::create('spells', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+            $table->bigIncrements('id'); // auto id
+            $table->string('spell'); // spell name
+            $table->string('description'); // spell description
+            $table->string('range'); // spells range
+            $table->string('damage'); // damage (3d6)
+            $table->string('damagetype'); // damage type - fire, necrotic, radiant, etc
+            $table->timestamps(); // auto creation timestamp
         });
     }
 
