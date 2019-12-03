@@ -14,8 +14,12 @@ class CreateArmorsTable extends Migration
     public function up()
     {
         Schema::create('armors', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->timestamps();
+            $table->bigIncrements('id'); // auto id
+            $table->string('armor'); // armor name
+            $table->string('description'); // armor description
+            $table->string('armorclass'); // armor class (12, 15, 18)
+            $table->string('armortype'); // armor type (light, medium, heavy)
+            $table->timestamps(); // auto creation timestamp
         });
     }
 
