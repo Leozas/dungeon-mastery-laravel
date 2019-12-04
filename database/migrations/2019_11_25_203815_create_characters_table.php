@@ -13,8 +13,21 @@ class CreateCharactersTable extends Migration
      */
     public function up()
     {
+
         Schema::create('characters', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->bigIncrements('id'); //
+            $table->text('character_name');
+            $table->tinyInteger('strength');
+            $table->tinyInteger('dexterity');
+            $table->tinyInteger('constitution');
+            $table->tinyInteger('intelligence');
+            $table->tinyInteger('wisedom');
+            $table->tinyInteger('charisma');
+            $table->tinyInteger('intitiative');
+            $table->tinyInteger('health_points');
+            $table->unsignedBigInteger('weapon_id');//weapon
+            $table->unsignedBigInteger('armor_id');//armor 
+            $table->unsignedBigInteger('spell_id');//spell
             $table->timestamps();
         });
     }

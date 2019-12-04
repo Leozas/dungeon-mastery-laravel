@@ -15,11 +15,11 @@ class CreateSpellsTable extends Migration
     {
         Schema::create('spells', function (Blueprint $table) {
             $table->bigIncrements('id'); // auto id
-            $table->string('spell'); // spell name
-            $table->string('description'); // spell description
-            $table->string('range'); // spells range
-            $table->string('damage'); // damage (3d6)
-            $table->string('damagetype'); // damage type - fire, necrotic, radiant, etc
+            $table->text('spell'); // spell name
+            $table->text('description'); // spell description
+            $table->text('range'); // spells range
+            $table->text('damage'); // damage (3d6)
+            $table->text('damagetype'); // damage type - fire, necrotic, radiant, etc
             $table->timestamps(); // auto creation timestamp
         });
     }

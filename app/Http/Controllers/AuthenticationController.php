@@ -14,15 +14,15 @@ class AuthenticationController extends Controller
         if ($user) {
             if ($request->password == $user->password) {
                 $token = $user->createToken('Laravel Password Grant Client')->accessToken;
-                $responce = ['token' => $token];
-                return response($responce, 200);
+                $response = ['token' => $token];
+                return response($response, 200);
             } else {
                 $response = 'Password Missmatch';
                 return response($response, 422);
             }
         } else {
             $respose = 'User doesn\'t exist';
-            return responce($responce, 422);
+            return response($response, 422);
         }
     }
 

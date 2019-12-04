@@ -46,7 +46,7 @@ class ArmorsController extends Controller
      */
     public function show(Armors $armors)
     {
-        //
+        return Armors::all();
     }
 
     /**
@@ -57,7 +57,7 @@ class ArmorsController extends Controller
      */
     public function edit(Armors $armors)
     {
-        //
+//
     }
 
     /**
