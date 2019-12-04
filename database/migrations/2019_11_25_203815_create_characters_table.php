@@ -25,9 +25,12 @@ class CreateCharactersTable extends Migration
             $table->tinyInteger('charisma');
             $table->tinyInteger('intitiative');
             $table->tinyInteger('health_points');
-            $table->unsignedBigInteger('weapon_id');//weapon
-            $table->unsignedBigInteger('armor_id');//armor 
-            $table->unsignedBigInteger('spell_id');//spell
+            $table->text('weapon');//weapon
+            $table->text('weapon_damage');//weapon
+            $table->text('armor');
+            $table->text('armor_class');
+            $table->text('spell');
+            $table->text('spell_damage');
             $table->timestamps();
         });
     }

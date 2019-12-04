@@ -29,8 +29,14 @@ Route::middleware('auth:api')->group(function(){
     Route::get('/logout','AuthenticationController@logout')->name('logout');
 });
 
-// show tables
+// show descriptions
 Route::get('/attributes', 'AttributeDescriptionsController@show')->name('attribute'); 
 Route::get('/weapons', 'WeaponsController@show')->name('weapon');
 Route::get('/armors', 'ArmorsController@show')->name('armor');
 Route::get('/spells', 'SpellsController@show')->name('spell');
+
+// show characters
+Route::get('/characters', 'CharactersController@show')->name('character_name');
+
+//show creatures
+Route::get('/creatures', 'CharactersController@show')->name('creature_name');

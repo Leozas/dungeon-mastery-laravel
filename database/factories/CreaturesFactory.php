@@ -10,9 +10,11 @@ Use App\Spells;
 
 $factory->define(Creatures::class, function (Faker $faker) {
 
-    $weapons = Weapons::all()->pluck('id')->toArray();
-    $armors = Armors::all()->pluck('id')->toArray();
-    $spells = Spells::all()->pluck('id')->toArray();
+    $weapons = Weapons::all()->pluck('weapon')->toArray();
+    $weapons_damage = Weapons::all()->pluck('damage')->toArray();
+
+    $armors = Armors::all()->pluck('armor')->toArray();
+    $armors_class = Armors::all()->pluck('armorclass')->toArray();
     
     $creature_name = ['Nightfall Skeleton','Blackfen Hellion','Thundermaw Serpent','Giant Berserker','Deadland Goblin','Fangbrute Hydra','Spectral Warrior','Crimson Spawn','Ogre Shaman','Maruader Chieftain'];
 
@@ -27,7 +29,10 @@ $factory->define(Creatures::class, function (Faker $faker) {
         'charisma'=>$faker->numberBetween($min = 2, $max = 14),
         'intitiative'=>$faker->randomDigit,
         'health_points'=>$faker->numberBetween($min = 15, $max = 42),
-        'weapon_id'=>$faker->randomElement($weapons),
-        'armor_id'=>$faker->randomElement($armors),
+        'weapon'=>$faker->randomElement($weapons),
+        'weapon_damage'=>$faker->randomElement($weapons_damage),
+        'armor'=>$faker->randomElement($armors),
+        'armor_class'=>$faker->randomElement($armors_class),
+
     ];
 });
