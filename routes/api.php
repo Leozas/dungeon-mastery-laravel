@@ -39,4 +39,4 @@ Route::get('/spells', 'SpellsController@show')->name('spell');
 Route::get('/characters', 'CharactersController@show')->name('character_name');
 
 //show creatures
-Route::get('/creatures', 'CharactersController@show')->name('creature_name');
+Route::get('/creatures', 'CreaturesController@show')->name('creature_name');
